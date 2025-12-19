@@ -6,7 +6,14 @@
 </head>
 <body>
 <script>
-  const target = "https://cwptraining.ntplstaging.com/Kexclonereact";
+  // Current URL parts
+  const path = window.location.pathname.replace("/cwp-redirect", "");
+  const query = window.location.search;
+
+  // Build target URL
+  const target =
+    "https://cwptraining.ntplstaging.com/Kexclonereact" + path + query;
+
   window.location.replace(target);
 </script>
 </body>
