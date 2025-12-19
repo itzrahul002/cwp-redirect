@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Redirecting...</title>
+</head>
+<body>
+<script>
+  // remove repo name from path
+  const repo = "/cwp-redirect";
+  const path = window.location.pathname.replace(repo, "");
+  const query = window.location.search;
+
+  const target =
+    "https://cwptraining.ntplstaging.com/Kexclonereact" + path + query;
+
+  window.location.replace(target);
+</script>
+</body>
+</html>
