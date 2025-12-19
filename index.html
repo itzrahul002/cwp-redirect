@@ -6,9 +6,14 @@
 </head>
 <body>
 <script>
-  // Pass token from GitHub link to your site
-  const params = window.location.search; // ?token=1002
-  const target = "https://cwptraining.ntplstaging.com/Kexclonereact/" + params;
+  // Get token from URL path (…/22)
+  const pathParts = window.location.pathname.split("/");
+  const token = pathParts[pathParts.length - 1];
+
+  // Redirect to your site
+  const target =
+    "https://cwptraining.ntplstaging.com/Kexclonereact/create-password?token=" + token;
+
   window.location.replace(target);
 </script>
 </body>
